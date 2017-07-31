@@ -1,5 +1,4 @@
-#ifndef ENVIRONMENT_H_INCLUDED
-#define ENVIRONMENT_H_INCLUDED
+#pragma once
 
 #include "vec3f.h"
 #include <vector>
@@ -42,4 +41,4 @@ EnvGrid MyGrid;         //initialize the environment grid
 
 
 
-#endif
+

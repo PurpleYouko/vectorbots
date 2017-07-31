@@ -2,6 +2,7 @@
 
 typedef unsigned int uint;
 
+//Stuff for space game version
 // object types
 enum { ship, base, planet, asteroid };
 // sensor types
@@ -25,6 +26,12 @@ enum { basic_rockets, torpedoes, laser, disruptor, wave, beam };
 
 // general all purpose upgrade levels
 enum { mkI, mkII, mkIII, mkIV, mkV, mkVI, mkVII, mkVIII, mkIX, mkX };
+
+//end space game stuff
+
+//need some DarwinBots type stuff here
+
+//End DarwinBots type definitions
 
 
 

@@ -10,10 +10,12 @@ using namespace std;
 
 float rnd(float X) 
 {
+	// initialize random seed
+    srand (time(NULL));
 	return static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/X));
 }
 
-static void resize(int width, int height)  //handles resizing of the window
+static void resize(int width, int height)  //handles resizing of the window (except it kind of doesn't yet)
 {
     const float ar = (float) width / (float) height;
 
@@ -31,8 +33,7 @@ void LoadBots( )
 {
     // populates the botlist array with all the relevent information from files.
     // need to write a loading function here but for now hard code it
-    // initialize random seed
-    srand (time(NULL));
+    
     string line;
     int mode;
 	
@@ -43,7 +44,7 @@ void LoadBots( )
         thisbot->BotColor.R = (int) rnd(255) + 1;	//range of 1 to 255
 		thisbot->BotColor.B = (int) rnd(255) + 1;
 		thisbot->BotColor.G = (int) rnd(255) + 1;
-		thisbot->BotColor.O = 100;													//set opacity to 50 so it's semi transparent
+		thisbot->BotColor.O = 100;													//set opacity to 100 so it's semi transparent
 		thisbot->sprite.setTexture(BotBack);										//apply global texture. defined in h file and preloaded in main
 		thisbot->sprite.setColor(sf::Color(thisbot->BotColor.R, thisbot->BotColor.B, thisbot->BotColor.G, thisbot->BotColor.O));	//Apply colors to the sprite
 		thisbot->OutLine.setTexture(BotOutline);
@@ -58,10 +59,8 @@ void LoadBots( )
 		thisbot->speedY = 0;
 		thisbot->Vel = 0;
 		thisbot->VelAngle = 0;
-        //thisbot->speed = (float)rand() / ((float)RAND_MAX) / 10; // 0.0 to 0.1
-		//cout << "Bot " << bot_count << " x = " << thisbot->X << " y = " << thisbot->Y << endl;
 
-        //add this bot to the environment grid. 20 by 20
+        //add this bot to the environment grid. 20 by 20. Not yet functional
         thisbot->GridX = (int)((thisbot->X + 1) * 10);
         thisbot->GridY = (int)((thisbot->Y + 1) * 10);
 		//set the center of rotation
@@ -148,7 +147,7 @@ void LoadBots( )
 }
 
 
-//Handles all keypress events
+//Handles all keypress events (doesn't yet)
 static void key(unsigned char key, int x, int y)
 {
 

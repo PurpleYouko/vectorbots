@@ -37,6 +37,8 @@ struct Components
 
 };
 
+
+//stuff specific to space game version
 struct Cargo
 {
 	uint CargoType;			// What type of cargo is held in this bay
@@ -62,6 +64,8 @@ struct Sensor
 
 };
 
+//end space game specifics
+
 
 class VecBot
 {
@@ -69,7 +73,7 @@ class VecBot
 
     // Basic information
     bool Exist;				// does the bot exist
-	std::string Race;		// the race identifier
+	std::string Race;		// the race or species identifier
     float X;				// X coordinate
     float Y;				// Y coordinate
     uint GridX;				// Position in the environment grid
@@ -80,7 +84,7 @@ class VecBot
 	
     
 	uint SlotCount;			// the number of expansion slots in the build
-    uint CoduleCount;		// the number of genes in the bot's DNA
+    uint CoduleCount;		// the number of codules in the bot's DNA
     Bcolor BotColor;		// color of the bot in RGB as GLfloats
     double angle;			// The angle that the bot is facing
     double speed;			// the speed at which the bot is moving

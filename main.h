@@ -83,6 +83,7 @@ const float high_shininess[] = { 100.0f };
 //Base texture
 sf::Texture BotBack;
 sf::Texture BotOutline;
+sf::Texture BotAccelerate;
 
 //lists and vectors    
 std::vector <VecBot*> BotList;  //create the list to hold all the bots. 
